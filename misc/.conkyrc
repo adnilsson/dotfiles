@@ -1,0 +1,72 @@
+# Conky, a system monitor, based on torsmo
+#
+# Any original torsmo code is licensed under the BSD license
+#
+# All code written since the fork of torsmo is licensed under the GPL
+#
+# Please see COPYING for details
+#
+# Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
+# Copyright (c) 2005-2010 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
+# All rights reserved.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+alignment top_left 
+background no
+border_width 1
+cpu_avg_samples 2
+default_color white
+default_outline_color white
+default_shade_color white
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+use_xft yes
+font Fira Sans:thin:size=120
+gap_x 80
+gap_y 20
+minimum_size 5 5
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+
+# Window Setting
+own_window_argb_visual true
+own_window_argb_value 0
+own_window_type desktop
+own_window yes
+own_window_transparent yes
+
+stippled_borders 0
+update_interval 1.0
+uppercase no
+use_spacer none
+show_graph_scale no
+show_graph_range no
+
+TEXT
+${time %R}${font Fira Sans:thin:size=26}
+#Day of the week fix (small å fix)
+${if_match ${time %u} == 1}MONDAY${endif}${if_match ${time %u} == 2}TUESDAY${endif}${if_match ${time %u} == 3}WENDSDAY${endif}${if_match ${time %u} == 4}THURSDAY${endif}${if_match ${time %u} == 5}FRIDAY${endif}${if_match ${time %u} == 6}SATURDAY${endif}${if_match ${time %u} == 7}SUNDAY${endif} ${if_match ${time %m} == 1}JANUARY${endif}${if_match ${time %m} == 2}FEBRUARY${endif}${if_match ${time %m} == 3}MARS${endif}${if_match ${time %m} == 4}APRIL${endif}${if_match ${time %m} == 5}MAY${endif}${if_match ${time %m} == 6}JUNE${endif}${if_match ${time %m} == 7}JULY${endif}${if_match ${time %m} == 8}AUGUST${endif}${if_match ${time %m} == 9}SEPTEMBER${endif}${if_match ${time %m} == 10}OCTOBER${endif}${if_match ${time %m} == 11}NOVEMBER${endif}${if_match ${time %m} == 12}DECEMBER${endif} ${time %d} 
+
+
+
+
+
+
+
