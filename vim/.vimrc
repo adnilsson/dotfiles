@@ -31,6 +31,10 @@ set tabstop=4			" How many columns that makes a tab.
 set shiftwidth=4		" 'Number of spaces to use for each step of (auto)indent'
 set softtabstop=4		" Sapaces used when 'inserting' tabs?
 
+" Splitting
+set splitbelow    " sp opens new window at bottom
+set splitright    " vsp opens new window to the right
+
 
 """"""""""""""""""""""""""""""""Corpus interaction""""""""""""""""""""""""""""""
 
